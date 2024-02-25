@@ -1,0 +1,47 @@
+services:
+  postgres:
+
+    container_name: publishcontainer
+
+    image: "postgres"
+
+    restart: always
+
+    environment:
+
+     - POSTGRES_USER=postgres
+
+     - POSTGRES_PASSWORD=password
+
+     - POSTGRES_DB=testdb
+
+    ports:
+
+     - "5432:5432"
+
+    expose: 
+
+     - "5432"
+
+  pgadmin:
+
+    container_name: pgadmin1
+
+    image: "dpage/pgadmin4"
+
+    restart: always
+
+    environment:
+
+     - PGADMIN_DEFAULT_EMAIL=postgres@youssoufdiallo.com
+
+     - PGADMIN_DEFAULT_PASSWORD=password@Secret
+
+    ports:
+
+     - "80:80"
+
+    expose:
+
+     - "80"
+
