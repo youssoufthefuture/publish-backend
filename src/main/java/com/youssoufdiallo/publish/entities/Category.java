@@ -10,8 +10,10 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
 
-@Entity(name = "CATEGORY")
+@Entity
+@Table(name = "CATEGORY")
 public class Category implements Serializable {
 
 	private static final long serialVersionUID = 1L;

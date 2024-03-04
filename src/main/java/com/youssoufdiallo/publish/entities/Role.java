@@ -11,8 +11,10 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
+import jakarta.persistence.Table;
 
-@Entity(name = "ROLE")
+@Entity
+@Table(name = "ROLE")
 public class Role implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
